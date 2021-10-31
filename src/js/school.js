@@ -20,20 +20,6 @@ let addValue4 = document.getElementById("addValue-4");
 // lodes in the api with an event listener connects to the function getApi
 window.addEventListener('load', getApi);
 
-// event listener for the add api button
-// by putting an extra function and adding prevent defult we can stop the
-// form from reloding the page, a defult form relodes the page
-// stoping all the code from having time to run making the code not work as intended.
-
-// addApibtn.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     addApi();
-//     // gives back empty values in our form reseting it
-//     addValue1.value = "";
-//     addValue2.value = "";
-//     addValue3.value = "";
-//     addValue4.value = "";
-// });
 
 //funktions -------
 
@@ -45,9 +31,7 @@ function getApi() {
         .then(response => response.json())
         .then(data => {
             data.forEach(tabel => {
-                // prints out our courses into a tabel
-                // target blank for the webblinks 
-                // a button to erase a course in the bottom
+                // prints out our courses to the index
                 content.innerHTML +=
                     `<div class="school-wrapper" id="school-wrapper">
                     <div class="box1">
@@ -75,7 +59,6 @@ function getApi() {
             })
         })
 }
-{/* <td><a href="${course.kursplan}"target="_blank">Webblänk</a></td> */ }
 
 // function for adding courses
 function addApi() {

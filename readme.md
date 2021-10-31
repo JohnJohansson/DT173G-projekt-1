@@ -1,41 +1,37 @@
 # DT173G-Webbutveckling-3
-School assignment to learn git
+School assignment to learn git, api, CRUD, gulp and more
 
-## Assignment 5
-An continuation of assigment 3
+## Projekt
+An examinatig projekt to end the course
 
 ### Whats new
 
-This time I been learning how to make and consume an api, this is the the consuming part of it.
+This is the fron end part of my CRUD projekt wich stands for Create, Read, Update and Delete. 
 
-It got full suport for CRUD wich stands for Create, Read, Update and Delete. To do this I use the metodhs
+This part is meant to work as a consuming part, where you can read out your three apis so the public can see 
 
-Of GET, POST, PUT and DELETE.
+them. So the only method we'r using here is GET. The Admin part of this projekt will use the other parts of 
 
-So what this simple webpage is doing is reading in the apeis, translaring it dfrom J-son data and 
+Crud so what this webpage is doing is reading in the apeis, translaring it from J-son data and 
 
-it lets us delete existing courses (its a list of courses I have or am atneding) or add new ones. 
+And lets us consume them in a nice styleble way.
 
-Atleast that how it works on localhost, I can sadly not get it to work propertly online and I dont know why.
-
-Heres a Link where you can see the API as J-son data: https://doggobloggo12.000webhostapp.com/api/api.php
-
-and heres one where you can see the data being consumed by this webpage! https://doggobloggo12.000webhostapp.com/consume/pub/index.html
+To get the other two parts of the projekt you can go here: https://github.com/JohnJohansson/DT173G-projekt-3-api for the API's and here: https://github.com/JohnJohansson/DT173G-projekt-2-admin for the Admin part. 
 
 
 ### Purpose
 
-The purpose of this assigment is to learn the basics of gulp and using it to automate tasks.
+Thhis repo is using gulp  to automate tasks.
 
-In this assigment I will use gulp with npm packages from https://www.npmjs.com/
+It uses gulp with npm packages from https://www.npmjs.com/
 To merge and minimize CSS files, JS files, minimize pictures and automaticly transfer them and html files
 from a sourch map to a published map. 
 
-Note: added /node_modules to gitignore, so they wont be uploded to the repo.
+Note: /node_modules is added to gitignore, so they wont be uploded to the repo.
 
 ### Gulp - https://www.npmjs.com/package/gulp
 
-Will be used for this assigment, the gulp functions I will use is "src, dest, parallel, series, watch"
+Will is used for this the gulp functions it uses is "src, dest, parallel, series, watch"
 
 1. **src**
 This is for deciding our source map.
@@ -54,23 +50,18 @@ This is so we can watch for changes in our files and automaticly updating them.
 
 ### gulp-concat - https://www.npmjs.com/package/gulp-concat
 
-Will be used for for merging togheter my CSS and JS files.
-
-This was a good alternative since it works for both css and js files.
+Is used for for merging togheter the CSS and JS files.
 
 ### gulp-terser - https://www.npmjs.com/package/gulp-terser
 
 Tereser is used to minimize js files (removing comment and spaces to make the file smaller)
 
-This seamed like a good alternative for JS minimizing. 
-
 ### gulp-cssnano - https://www.npmjs.com/package/gulp-cssnano
 
-Cssnano was used to minimize the css file. 
+Cssnano is used to minimize the css file. 
 
-However the v8.0 has an error, so I had to use the older version 7.1 as can be seen in the 
-package.json file. ("gulp-imagemin": "^7.1.0",) maybe there is a better alternative,
-but the old version seams to work just fine.
+Note: That v8.0 has an error, so I had to use the older version 7.1 as can be seen in the 
+package.json file. ("gulp-imagemin": "^7.1.0",)
 
 ### How it was created
 
@@ -163,6 +154,9 @@ You cant use the terminal while running the autmatic updater, to stop it hold do
 
 Added suport for browser sync.
 
+**Update 1.2**
+
+Updated the readme to better explain the projekt.
 
 
 

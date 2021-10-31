@@ -20,21 +20,6 @@ let addValue4w = document.getElementById("addValue2-4");
 // lodes in the api with an event listener connects to the function getApi
 window.addEventListener('load', getApi2);
 
-// event listener for the add api button
-// by putting an extra function and adding prevent defult we can stop the
-// form from reloding the page, a defult form relodes the page
-// stoping all the code from having time to run making the code not work as intended.
-
-// addApibtn2.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     addApi2();
-//     // gives back empty values in our form reseting it
-//     addValue1w.value = "";
-//     addValue2w.value = "";
-//     addValue3w.value = "";
-//     addValue4w.value = "";
-// });
-
 //funktions -------
 
 // connects to the api database where the tabels are stored
