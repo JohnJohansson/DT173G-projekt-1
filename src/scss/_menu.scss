@@ -1,0 +1,90 @@
+// main menu ---------------------
+
+.main-menu ul {
+    display: flex;
+}
+
+// nesting the links in the main menu
+.main-menu {
+    a {
+        margin         : .3rem;
+        color          : $color2_light;
+        text-transform : uppercase;
+        text-decoration: none;
+        padding        : 1.1rem .8rem;
+    }
+
+    a:hover {
+        color: $color4;
+    }
+
+}
+// the logo
+.header-wrapper {
+    .logo {
+        a {
+            text-transform : uppercase;
+            text-decoration: none;
+            color          : $color2_light;
+        }
+    }
+}
+
+/*---------------------- hamburger menu--------------------------------- */
+
+.hamburger-wrapper {
+    display : none;
+    position: relative;
+}
+
+.active {
+    border-bottom: solid 3px #707070;
+    width        : 100%;
+}
+
+@media screen and (max-width: 625px) {
+
+    /*---------------------- hamburger menu--------------------------------- */
+
+    .hamburger-wrapper {
+        display : block;
+        width   : 100%;
+        position: absolute;
+        top     : 2%;
+
+        .toggle {
+            width      : 10%;
+            font-size  : 33px;
+            margin-left: 15px;
+        }
+
+        .hamburgerMenu {
+            display         : none;
+            position        : relative;
+            z-index         : 10;
+            background-color: $color2;
+            margin-top      : 1%;
+            width           : 100%;
+            position        : absolute;
+            list-style      : none;
+        }
+
+        a {
+            color          : $color1;
+            font-size      : 24px;
+            display        : block;
+            padding        : 20px 16px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: $color2_light;
+            color           : $color4_dark;
+        }
+
+        .fa-bars {
+            color: $color1;
+        }
+    }
+
+}

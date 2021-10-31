@@ -1,0 +1,52 @@
+// header -----------------------
+.header-wrapper {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    height         : 60px;
+    width          : 85vw;
+    padding        : 1vw 10vw;
+}
+
+// line above main content
+.line {
+    background-color: $color4;
+    width           : 100%;
+    height          : 15px;
+}
+
+// banner picture -----------------
+.banner {
+    position: relative;
+    width   : 100%;
+
+    h1 {
+        font-size: 4.5vw;
+        color    : $color1;
+        position : absolute;
+        top      : 40%;
+        left     : 38%;
+    }
+
+    img {
+
+        width: inherit;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    header {
+        .main-menu {
+            display: none;
+        }
+    }
+
+}
+
+@media screen and (max-width: 625px) {
+    .header-wrapper {
+        .logo {
+            margin-left: 40%;
+        }
+    }
+}

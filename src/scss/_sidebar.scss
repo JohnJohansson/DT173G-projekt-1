@@ -1,0 +1,107 @@
+// side bar--------------------------
+
+.sidebar {
+
+    float           : right;
+    background-color: $color3;
+    margin-right    : 4%;
+    margin-top      : 2%;
+    margin-bottom   : 10%;
+    width           : 25%;
+    padding-bottom  : 10%;
+
+    .text {
+        width      : 98%;
+        margin     : 0 auto;
+        font-weight: bold;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        color         : $color1;
+        text-align    : center;
+        font-size     : 26px;
+        padding-top   : 3%;
+        padding-bottom: 6%;
+    }
+
+    p {
+        color    : $color1;
+        font-size: 16px;
+    }
+}
+
+// clear before footer
+.clear {
+    clear     : both;
+    margin-top: 5%;
+    height    : 100px;
+    width     : 100%;
+}
+
+@media screen and (max-width: 1055px) {
+
+    // side bar--------------------------
+
+    .sidebar {
+
+        float           : none;
+        background-color: $color3;
+        margin          : 0 auto;
+        margin-top      : 3%;
+        padding         : 0%;
+        width           : 96%;
+        margin-bottom   : 10%;
+
+        h2 {
+            padding       : 0%;
+            padding-top   : 5px;
+            padding-bottom: 5px;
+        }
+
+        img {
+            display: none;
+
+        }
+
+        form {
+            height: auto;
+
+            input {
+                padding      : 2px;
+                margin       : 0 auto;
+                margin-top   : 10px;
+                margin-bottom: 5px;
+                width        : 60%;
+
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 625px) {
+
+
+}
+// for the smallest screens
+@media screen and (max-width: 420px) {
+
+
+    .sidebar {
+
+        h2 {
+            font-size: 5vw;
+        }
+    }
+
+    .sidebar {
+        font-size: 3vw;
+
+        .submitbtn {
+            font-size: 2.5vw;
+        }
+    }
+}

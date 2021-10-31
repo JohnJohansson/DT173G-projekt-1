@@ -1,0 +1,62 @@
+// a place for vars and mixins for later imports into the code
+
+//saved colors in vars -------------
+$color1      : rgb(211, 151, 60);
+$color2      : rgb(24, 18, 18);
+//lighter version of color 2
+$color2_light: lighten($color2, 70%);
+$color3      : rgb(7, 4, 4);
+// lighter version of color 3
+$color3_light: lighten($color3, 5%);
+$color4      : rgb(211, 91, 91);
+// darker version of color 4
+$color4_dark : darken($color4, 25%);
+
+//the basic theme for the page neon lights
+html {
+    --color: rgb(0, 255, 255);
+    --color-2:rgb(0, 255, 255);
+    --shadow: 0px 0px 12px rgb(0, 255, 255);
+  }
+  
+  // Neon light off
+  [theme="neon"] {
+      --color:  rgb(250, 235, 215);
+      --color-2: rgb(204, 204, 204);
+      --shadow: none;
+  }
+  
+
+
+// mixins --------------------------
+
+//the main content
+@mixin main($main: false) {
+    width        : 60%;
+    border-radius: 2%;
+
+    @if $main {
+        width: 96%;
+    }
+
+    @else {
+        border-radius: 0%;
+    }
+
+}
+
+//for the footer boxes. 
+@mixin boxes($small: false) {
+    height       : 150px;
+    width        : 25%;
+    border-radius: 0%;
+
+    @if $small {
+        height: 50px;
+        width : 96%;
+    }
+
+    @else {
+        border-radius: 1%;
+    }
+}

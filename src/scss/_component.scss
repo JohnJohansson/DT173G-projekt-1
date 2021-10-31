@@ -1,0 +1,50 @@
+// A place for buttons, text boxes, links ect
+
+
+
+//toggle --------------
+
+//the toggle itshelfe
+.toggle-theme {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 1%;
+    display: flex;
+    #checkbox{
+      display: none;
+    }
+    // the inner toggle
+    .toggle {
+      background-color: var(--color-2);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+      position: absolute;
+      transition: .4s;
+      border-radius: 35px;
+    }
+    .toggle:before {
+      background-color: rgb(255, 255, 255);
+      width: 25px;
+      border-radius: 48%;
+      height: 26px;
+      left: 5px;
+      bottom: 5px;
+      position: absolute;
+      content: "";
+      transition: .4s;
+    }
+    // change the color if box is checked
+    input:checked + .toggle {
+      background-color: var(--color);
+    }
+    //move the toggle to the right when box is checked
+    input:checked + .toggle:before {
+      transform: translateX(25px);
+    }
+    
+  }

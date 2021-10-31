@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Lets gulp</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Hamburger menu -->
+        <nav class="hamburger-wrapper">
+            <div class="toggle" onclick="toggle()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div id="hamburgerMenuID" class="hamburgerMenu">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Nyheter</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </div>
+        </nav>
+        <!-- hamburger wrapper end -->
+        <!-- wrapper for main menu and logo -->
+        <div class="header-wrapper">
+            <div class="logo">
+                <a href="index.html">Logga</a>
+            </div>
+            <!-- the main menu -->
+            <nav>
+                <div class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="#">Om mig</a></li>
+                        <li><a href="#">Nyheter</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+        <!-- header-wrapper end -->
+        <div class="banner"><img src="img/i01.jpg">
+            <h1>Kurser</h1>
+        </div>
+
+    </header>
+    <!-- header end -->
+
+    <div class="line">
+
+    </div>
+    <div class="main">
+        <div class="content">
+            <h2>Mina kurser</h2>
+            <!-- a table for my courses -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kursnamn</th>
+                        <th>Kurskod</th>
+                        <th>Progression</th>
+                        <th>Kursplan</th>
+                        <th>Radera</th>
+                    </tr>
+                </thead>
+                <!-- print my courses -->
+                <tbody id="printCourses">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- main end -->
+
+    <!-- a sidbar where you can add courses -->
+    <div class="sidebar">
+        <div class="pic">
+            <img src="img/i02.jpg">
+        </div>
+        <div class="text">
+            <h2>Lägg till kurs</h2>
+            <!-- for for adding courses -->
+            <form>
+
+                <label for="addKurskod">Kurskod</label><br>
+                <input type="text" id="addKurskod" name="addKurskod"><br>
+
+                <label for="addKursnamn">Kursnamn</label><br>
+                <input type="text" id="addKursnamn" name="addKursnamn"><br><br>
+
+                <label for="addProgression">Progression</label><br>
+                <input type="text" id="addProgression" name="addProgression"><br><br>
+
+                <label for="addKursplan">Kursplan</label><br>
+                <input type="text" id="addKursplan" name="addKursplan"><br><br>
+                <!-- button -->
+                <input type="submit" value="Lägg till" class="submitbtn" id="addCourse">
+
+            </form>
+
+        </div>
+    </div>
+    <!-- sidebar end -->
+
+    <!-- clears the flot of the sidbar -->
+    <div class="clear"></div>
+
+    <!-- the main footer -->
+    <footer>
+        <!-- footer boxes -->
+        <div class="box1">
+            <p>box 1</p>
+        </div>
+        <div class="box2">
+            <p>box 2</p>
+        </div>
+        <div class="box3">
+            <p>box 3</p>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/f001f8c4bf.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

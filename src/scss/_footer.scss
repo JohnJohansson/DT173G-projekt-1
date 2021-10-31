@@ -1,0 +1,53 @@
+// footer -----------------
+footer {
+    .box1 {
+        @include boxes;
+        // background-color: $color3_light;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+
+    // @extend copies the box1 styling
+    .box2,
+    .box3 {
+        @extend .box1;
+    }
+}
+
+// footer ---------------
+footer {
+    background-color: rgb(0, 0, 0);
+    min-height: 200px;
+    width: 100%;
+    color: $color1;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1055px) {
+    footer {
+        .box1 {
+            @include boxes($small: true);
+            margin: 0 auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+    }
+
+    .main {
+        footer {
+            display: block;
+            padding-top: 1%;
+        }
+    }
+}
+
+// for the smallest screens
+@media screen and (max-width: 420px) {
+    footer {
+        font-size: 3vw;
+    }
+}

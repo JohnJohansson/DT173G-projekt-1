@@ -1,0 +1,391 @@
+// the geeneral layout of the page
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+// the body
+body {
+    background-color: $color2;
+    position        : relative;
+    min-height      : 100vh;
+}
+// table for the courses
+table {
+    font-family     : arial, sans-serif;
+    width           : 100%;
+    background-color: $color2;
+
+    td,
+    th {
+        border    : 1px solid #8d7920;
+        text-align: left;
+        padding   : 8px;
+        color     : #ddcf52;
+        width     : 100%;
+        text-align: center;
+    }
+
+    tr:nth-child(even) {
+        background-color: #2e2525;
+    }
+
+    th {
+        background-color: #ddcf52;
+        color           : #000000;
+        font-weight     : bolder;
+        width           : 100%;
+    }
+
+    button {
+        background-color: #ddcf52;
+    }
+
+    button:hover {
+        background-color: #8d8430;
+    }
+}
+// for for adding more courses
+form {
+    background-color: #ddcf52;
+    width           : 100%;
+    text-align      : center;
+    padding-top     : 5%;
+    padding-bottom  : 5%;
+
+    label {
+        width: 100%;
+    }
+
+    input {
+        width         : 70%;
+        padding-top   : 1%;
+        padding-bottom: 1%;
+        margin-top    : 2%;
+        margin-bottom : 2%;
+    }
+
+    .submitbtn {
+
+        background-color: #9e932e;
+        font-weight     : bold;
+
+    }
+
+    .submitbtn:hover {
+        background-color: rgb(170, 162, 43);
+    }
+
+}
+
+// header -----------------------
+.header-wrapper {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    height         : 60px;
+    width          : 85vw;
+    padding        : 1vw 10vw;
+}
+
+// line above main content
+.line {
+    background-color: $color4;
+    width           : 100%;
+    height          : 15px;
+}
+
+// main content ---------------------
+
+.main {
+    @include main;
+    margin     : 0 auto;
+    margin-left: 5%;
+    float      : left;
+    background : rgba(255, 250, 205, 0.164);
+    margin-top : 2%;
+    margin-bottom: 10%;
+
+    h2 {
+        text-align    : center;
+        color         : $color1;
+        font-size     : 26px;
+        padding-top   : 5%;
+        padding-bottom: 3%;
+        background    : rgba(0, 0, 0, 0.521);
+        padding-top   : 2%;
+        padding-bottom: 2%;
+
+    }
+
+    p {
+        color         : $color1;
+        background    : rgba(0, 0, 0, 0.281);
+        padding-top   : 3%;
+        padding-bottom: 5%;
+        width         : 50%;
+        margin        : 0 auto;
+        line-height   : 150%;
+    }
+}
+
+// side bar--------------------------
+
+.sidebar {
+
+    float           : right;
+    background-color: $color3;
+    margin-right    : 4%;
+    margin-top      : 2%;
+    margin-bottom   : 10%;
+    width           : 25%;
+    padding-bottom  : 10%;
+
+    .text {
+        width      : 98%;
+        margin     : 0 auto;
+        font-weight: bold;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        color         : $color1;
+        text-align    : center;
+        font-size     : 26px;
+        padding-top   : 3%;
+        padding-bottom: 6%;
+    }
+
+    p {
+        color    : $color1;
+        font-size: 16px;
+    }
+}
+
+// clear before footer
+.clear {
+    clear     : both;
+    margin-top: 5%;
+    height    : 100px;
+    width     : 100%;
+}
+
+// footer ---------------
+footer {
+    background-color: rgb(0, 0, 0);
+    min-height      : 200px;
+    width           : 100%;
+    color           : $color1;
+    position        : absolute;
+    bottom          : 0;
+    display         : flex;
+    justify-content : space-around;
+}
+
+/*---------------------- hamburger menu--------------------------------- */
+
+.hamburger-wrapper {
+    display : none;
+    position: relative;
+}
+
+.active {
+    border-bottom: solid 3px #707070;
+    width        : 100%;
+}
+// smaller screens
+@media screen and (max-width: 1270px) {
+    .main {
+        @include main;
+        margin     : 0 auto;
+        margin-left: 5%;
+        float      : left;
+        background : rgba(255, 250, 205, 0.164);
+        margin-top : 2%;
+
+        h2 {
+            text-align    : center;
+            color         : $color1;
+            font-size     : 26px;
+            padding-top   : 5%;
+            padding-bottom: 3%;
+            background    : rgba(0, 0, 0, 0.521);
+            padding-top   : 2%;
+            padding-bottom: 2%;
+
+        }
+
+        p {
+            color         : $color1;
+            background    : rgba(0, 0, 0, 0.281);
+            padding-top   : 3%;
+            padding-bottom: 5%;
+            width         : 50%;
+            margin        : 0 auto;
+            line-height   : 150%;
+        }
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    body {
+        padding-bottom: 5rem;
+    }
+
+    .main {
+        @include main($main: true);
+        margin-left        : 0%;
+        margin             : 0 auto;
+        float              : none;
+    }
+
+    // side bar--------------------------
+
+    .sidebar {
+
+        float           : none;
+        background-color: $color3;
+        margin          : 0 auto;
+        margin-top      : 3%;
+        padding         : 0%;
+        width           : 96%;
+        margin-bottom   : 10%;
+
+        h2 {
+            padding       : 0%;
+            padding-top   : 5px;
+            padding-bottom: 5px;
+        }
+
+        img {
+            display: none;
+
+        }
+
+        form {
+            height: auto;
+
+            input {
+                padding      : 2px;
+                margin       : 0 auto;
+                margin-top   : 10px;
+                margin-bottom: 5px;
+                width        : 60%;
+
+            }
+        }
+    }
+
+    footer {
+        display    : block;
+        padding-top: 1%;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    header {
+        .main-menu {
+            display: none;
+        }
+    }
+
+    .main {
+        .content {
+            table {
+                font-size: 2.5vw;
+
+                button {
+                    width    : 95%;
+                    font-size: 1.5vw;
+                }
+            }
+        }
+    }
+
+    /*---------------------- hamburger menu--------------------------------- */
+
+    .hamburger-wrapper {
+        display : block;
+        width   : 100%;
+        position: absolute;
+        top     : 2%;
+
+        .toggle {
+            width      : 10%;
+            font-size  : 33px;
+            margin-left: 15px;
+        }
+
+        .hamburgerMenu {
+            display         : none;
+            position        : relative;
+            z-index         : 10;
+            background-color: $color2;
+            margin-top      : 1%;
+            width           : 100%;
+            position        : absolute;
+            list-style      : none;
+        }
+
+        a {
+            color          : $color1;
+            font-size      : 24px;
+            display        : block;
+            padding        : 20px 16px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: $color2_light;
+            color           : $color4_dark;
+        }
+
+        .fa-bars {
+            color: $color1;
+        }
+    }
+
+}
+// for the smallest screens
+@media screen and (max-width: 420px) {
+    .content {
+
+        h2 {
+            font-size: 5vw;
+
+        }
+    }
+
+    .sidebar {
+
+        h2 {
+            font-size: 5vw;
+        }
+    }
+
+    .sidebar {
+        font-size: 3vw;
+
+        .submitbtn {
+            font-size: 2.5vw;
+        }
+    }
+
+    .main {
+        .content {
+            table {
+                font-size: 2vw;
+
+                button {
+                    width    : 95%;
+                    font-size: 2.5vw;
+                }
+            }
+        }
+    }
+
+    footer {
+        font-size: 3vw;
+    }
+}

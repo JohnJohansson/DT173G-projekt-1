@@ -1,0 +1,343 @@
+// Puts the CV in the middle
+.main-body {
+    text-align: center;
+    margin: 0 auto;
+}
+// the cv container wrapper ---------
+.container-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
+    background-color: #111111;
+    color: #333333;
+    font-family: sans-serif;
+    padding: 20px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    min-height: 800px;
+    // the cv container -------------
+    .container {
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        // the inner wrapper ------------------
+        .inner-wrapper {
+            // wrapper for the name of the CV
+            .name-wrapper {
+                color: var(--color);
+                text-shadow: var(--shadow);
+                padding: 3%;
+                position: relative;
+                letter-spacing: 5px;
+                font-weight: bold;
+                font-size: 24px;
+                text-align: left;
+
+                // the glowing border below the name
+                .line-bottom-name {
+                    background-color: var(--color);
+                    box-shadow: var(--shadow);
+                    border-radius: 50%;
+                    border-radius: 0;
+                    width: 100%;
+                    max-height: 2px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    margin-top: 4%;
+                    margin-bottom: 2%;
+                }
+                // the short description paragraf under the name and border
+                p {
+                    font-weight: normal;
+                    font-size: 16px;
+                    letter-spacing: 3px;
+                    font-family: Georgia, Times, "Times New Roman", serif;
+                    margin-top: 4%;
+                    margin-bottom: 3%;
+                }
+            }
+            // name wrapper end
+
+            // wrapper for the two colums inside ------
+            .colums-wrapper {
+                width: 100%;
+                display: flex;
+                color: var(--color);
+                text-shadow: var(--shadow);
+                font-size: 22px;
+                column-gap: 10%;
+                h3 {
+                    text-align: left;
+                    letter-spacing: 3px;
+                    margin-top: 5%;
+                }
+                p {
+                    font-size: 14px;
+                    text-align: left;
+                    line-height: 140%;
+                }
+                // colum 1 -------
+                .colum-1 {
+                    width: 45%;
+
+                    // the glowing line under contakt and earlier works
+                    .line-bottom-name {
+                        background-color: var(--color);
+                        box-shadow: var(--shadow);
+                        height: 2px;
+                        max-height: 2px;
+                        width: 100%;
+                        margin-top: 6%;
+                        margin-bottom: 4%;
+                    }
+                    p {
+                        font-size: 16px;
+                        margin-top: 3%;
+                        margin-bottom: 3%;
+                    }
+                    a {
+                        color: var(--color);
+                        text-shadow: var(--shadow);
+                        margin: 0;
+                        padding: 0%;
+                    }
+                    .webbpage-wrapper {
+                        display: block;
+                        text-align: left;
+                        column-gap: 10%;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        margin-bottom: 10%;
+                        .startdate,
+                        .enddate {
+                            margin-top: 2%;
+                            line-height: 155%;
+                            font-weight: bold;
+                        }
+                        .title {
+                            font-weight: bolder;
+                        }
+                        .title,
+                        .place {
+                            margin-top: 1%;
+                            line-height: 155%;
+                        }
+                    }
+                }
+                // colum 2 --------
+                .colum-2 {
+                    width: 45%;
+                    // the glowing line under sumary, work experiance and educcation
+                    .line-bottom-name {
+                        background-color: var(--color);
+                        box-shadow: var(--shadow);
+                        height: 2px;
+                        max-height: 2px;
+                        width: 100%;
+                        margin-top: 6%;
+                        margin-bottom: 4%;
+                    }
+                    // the wrapper for work experiance
+                    .work-wrapper {
+                        display: flex;
+                        text-align: left;
+                        column-gap: 10%;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        margin-bottom: 10%;
+                        .startdate,
+                        .enddate {
+                            margin-top: 2%;
+                            line-height: 155%;
+                            font-weight: bold;
+                        }
+                        .title {
+                            font-weight: bolder;
+                        }
+                        .title,
+                        .place {
+                            margin-top: 1%;
+                            line-height: 155%;
+                        }
+                    }
+                    // the wrapper for education
+                    .school-wrapper {
+                        display: flex;
+                        text-align: left;
+                        column-gap: 10%;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        margin-bottom: 10%;
+                        .startdate,
+                        .enddate {
+                            margin-top: 2%;
+                            line-height: 155%;
+                            font-weight: bold;
+                        }
+                        .school {
+                            font-weight: bolder;
+                        }
+                        .school,
+                        .course {
+                            margin-top: 1%;
+                            line-height: 155%;
+                        }
+                    }
+                }
+            }
+        }
+        // inner-wrapper end
+    }
+    // container end
+
+    // The glowing lines in the neo mode -------------------
+    .line-top,
+    .line-left,
+    .line-bottom,
+    .line-right {
+        position: absolute;
+        background-color: var(--color);
+        box-shadow: var(--shadow);
+        width: 4px;
+        height: calc(100% - 0px);
+        top: 0px;
+        left: 0px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    // the top line
+    .line-top {
+        border-radius: 0;
+        width: 100%;
+        max-height: 2px;
+    }
+    // the left line
+    .line-left {
+        top: 0px;
+        left: 100%;
+        width: 2px;
+        border-radius: 0;
+    }
+    // the bottom line
+    .line-bottom {
+        border-radius: 0;
+        width: 100%;
+        max-height: 2px;
+        top: 100%;
+    }
+    // the right line
+    .line-right {
+        border-radius: 0;
+        width: 3px;
+        .scan {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: white;
+            width: 100%;
+            border-radius: 50%;
+            animation: scan-loop 5s ease-in-out infinite;
+
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            height: 50%;
+        }
+        // the moving white line on the right side -----
+        @keyframes scan-loop {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: 100%;
+            }
+            100% {
+                top: 0;
+            }
+        }
+        // scan-loop end
+    }
+    // line right end
+}
+// container wrapper end
+
+// for the smallest screens
+@media screen and (max-width: 1310px) {
+    .container-wrapper {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 760px) {
+// the cv container wrapper ---------
+.container-wrapper {
+    width: 84%;
+
+    // the cv container -------------
+    .container {
+        // the inner wrapper ------------------
+        .inner-wrapper {
+
+            // wrapper for the two colums inside ------
+            .colums-wrapper {
+
+                display: block;
+
+                // colum 1 -------
+                .colum-1 {
+                    width: 100%;
+                }
+                // colum 2 --------
+                .colum-2 {
+                    width: 100%;
+                    // the wrapper for work experiance
+                    .work-wrapper {
+                        display: flex;
+                        text-align: left;
+                        column-gap: 10%;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        margin-bottom: 10%;
+                        .startdate,
+                        .enddate {
+                            margin-top: 2%;
+                            line-height: 155%;
+                            font-weight: bold;
+                        }
+                        .title {
+                            font-weight: bolder;
+                        }
+                        .title,
+                        .place {
+                            margin-top: 1%;
+                            line-height: 155%;
+                        }
+                    }
+                    // the wrapper for education
+                    .school-wrapper {
+                        display: flex;
+                        text-align: left;
+                        column-gap: 10%;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        margin-bottom: 10%;
+                        .startdate,
+                        .enddate {
+                            margin-top: 2%;
+                            line-height: 155%;
+                            font-weight: bold;
+                        }
+                        .school {
+                            font-weight: bolder;
+                        }
+                        .school,
+                        .course {
+                            margin-top: 1%;
+                            line-height: 155%;
+                        }
+                    }
+                }
+            }
+        }
+        // inner-wrapper end
+    }
+    // container end
+}
+}

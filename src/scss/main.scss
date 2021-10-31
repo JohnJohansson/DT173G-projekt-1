@@ -1,0 +1,46 @@
+//Imports our reset scss
+
+// MISC ----------------------------
+//reset 
+@import 'reset';
+
+// DESIGN ---------------------------
+
+// the base mixins, colors
+@import 'base';
+
+// COMPONENTS --------------------------
+
+// buttons 
+@import 'component';
+
+// the login-form
+@import 'login';
+
+// form for adding values
+
+@import 'form';
+
+//the tabel
+@import 'tabel';
+
+// PARTS OF THE PAGE --------------------
+
+// layout
+@import 'layout';
+
+// the header
+@import 'header';
+
+// the main menu
+@import 'menu';
+
+// the sidbar
+@import 'sidebar';
+
+//the footer
+@import 'footer';
+
+//working on
+
+@import 'cv';

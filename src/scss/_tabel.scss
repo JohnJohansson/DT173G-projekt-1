@@ -1,0 +1,68 @@
+// table for the courses
+table {
+    font-family     : arial, sans-serif;
+    width           : 100%;
+    background-color: $color2;
+
+    td,
+    th {
+        border    : 1px solid #8d7920;
+        text-align: left;
+        padding   : 8px;
+        color     : #ddcf52;
+        width     : 100%;
+        text-align: center;
+    }
+
+    tr:nth-child(even) {
+        background-color: #2e2525;
+    }
+
+    th {
+        background-color: #ddcf52;
+        color           : #000000;
+        font-weight     : bolder;
+        width           : 100%;
+    }
+
+    button {
+        background-color: #ddcf52;
+    }
+
+    button:hover {
+        background-color: #8d8430;
+    }
+}
+
+@media screen and (max-width: 625px) {
+
+    .main {
+        .content {
+            table {
+                font-size: 2.5vw;
+
+                button {
+                    width    : 95%;
+                    font-size: 1.5vw;
+                }
+            }
+        }
+    }
+
+}
+// for the smallest screens
+@media screen and (max-width: 420px) {
+
+    .main {
+        .content {
+            table {
+                font-size: 2vw;
+
+                button {
+                    width    : 95%;
+                    font-size: 2.5vw;
+                }
+            }
+        }
+    }
+}

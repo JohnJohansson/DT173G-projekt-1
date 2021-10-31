@@ -1,0 +1,32 @@
+// for for adding more courses
+form {
+    background-color: #ddcf52;
+    width           : 100%;
+    text-align      : center;
+    padding-top     : 5%;
+    padding-bottom  : 5%;
+
+    label {
+        width: 100%;
+    }
+
+    input {
+        width         : 70%;
+        padding-top   : 1%;
+        padding-bottom: 1%;
+        margin-top    : 2%;
+        margin-bottom : 2%;
+    }
+
+    .submitbtn {
+
+        background-color: #9e932e;
+        font-weight     : bold;
+
+    }
+
+    .submitbtn:hover {
+        background-color: rgb(170, 162, 43);
+    }
+
+}
